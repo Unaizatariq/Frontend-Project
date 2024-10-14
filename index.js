@@ -1,3 +1,37 @@
+window.addEventListener('scroll', function () {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
+});
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first slide
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // Change image every 3 seconds
+showSlide(currentSlide); // Initially show the first slide
+
+
 $(document).ready(function() {
     // jQuery Validation
     $("#contactForm").submit(function(event) {
@@ -34,3 +68,5 @@ $(document).ready(function() {
         return re.test(email);
     }
 });
+
+
