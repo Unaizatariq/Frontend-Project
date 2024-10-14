@@ -223,54 +223,107 @@ nav {
 }
 
 /* services */
- .services{
-    padding: 2em 4em;
-    width: 100%;
-    background-color: var(--white-color);
-    box-shadow: var(--shadow-color)
-} 
-.services-info{
-    width: 70%;
-}
-.service-quality{
-    width: 70%;
-    margin: 0em 2em;
-}
-
-.service-quality h2{
-    font-size: 1.7em;
-   width: 50%;
-    text-transform: capitalize;
-}
-.service-quality p{
- width: 70%;
-   text-align: justify;
-   margin: 1em 0;
-   color: var(--text-color);
-   font-size: smaller;
-   font-family: var(--font-family);
-}
-
-.service-choose{
+.services {
     display: flex;
-    width: 70%;
-    margin:1.5em;
-      margin-left: 2em;
+    justify-content: center;
+    padding: 5vw;
 }
-.our-services{
-    width: 39%;
-}
-.choose-us{
-    margin-left: 1em;
-    width: 35%;
-}
-.our-services h4, .choose-us h4 {
-    margin-bottom: 0.5em;
-  }
 
-.our-services p, .choose-us p {
-    font-size: small;
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
+
+.text-content {
+    width: 100%;
+    max-width: 50%;
+    padding-right: 3vw;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-choose {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.service-choose div {
+    width: 48%;
+}
+
+.service-choose h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.service-choose p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+}
+
+.action-buttons button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.image-content {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3vw;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    max-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .text-content, .image-content {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .text-content {
+        margin-bottom: 2rem;
+    }
+}
+ 
 @media (max-width: 768px) {
     .service-choose {
       flex-direction: column;
@@ -280,58 +333,75 @@ nav {
 
 
   /* printing-services */
- .printing{
+  .printing {
     padding: 2em 4em;
     width: 100%;
     background-color: var(--white-color);
-    box-shadow: var(--shadow-color)
-} 
-.printing-range{
+}
+
+.printing-range {
     width: 90%;
     margin: 0em 2em;
 }
 
-.printing-range h2{
+.printing-range h2 {
     font-size: 1.7em;
-   width: 50%;
+    width: 50%;
     text-transform: capitalize;
+    text-align: center;
 }
 
-.printing-services{
+/* Flexbox for the services */
+.printing-services {
     display: flex;
+    justify-content: space-between; /* Spread the items */
     width: 90%;
-    margin:1.5em;
-      margin-left: 2em;
-      margin-top: 4em;
+    margin: 1.5em auto;
+    gap: 1.5em; /* Space between items */
 }
 
-.printing-needs{
-    width: 30%;
-}
-.printing-options{
-    margin-left: 1.5em;
-    width: 30%;
+/* Styles for each service box */
+.printing-needs, .printing-options, .print-project {
+    flex: 1;
+    padding: 1.5em;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Slight rounding of the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
 }
 
-.print-project{
-    margin-left: 1.5em;
-    width: 30%;
+/* Hover effects for each service box */
+.printing-needs:hover, .printing-options:hover, .print-project:hover {
+    transform: translateY(-5px); /* Lift the box */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
-.printing-needs h3, .printing-options h3, .print-project h3{
+
+/* Headings and Text */
+.printing-needs h3, .printing-options h3, .print-project h3 {
     text-transform: capitalize;
     font-size: var(--font-small);
     margin-top: 0.5em;
-  }
+}
 
-  .printing-needs p, .printing-options p, .print-project p  {
+.printing-needs p, .printing-options p, .print-project p {
     font-size: small;
     margin-bottom: 1em;
 }
 
-.printing-needs a, .printing-options a, .print-project a{
+/* Links inside service boxes */
+.printing-needs a, .printing-options a, .print-project a {
     font-size: small;
     text-decoration: none;
     color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Add some padding and margin to the icons */
+.printing-needs i, .printing-options i, .print-project i {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
 }
 
 
@@ -342,6 +412,7 @@ nav {
     background-color: var(--white-color);
     box-shadow: var(--shadow-color)
 } 
+
 .delivery-info{
     width: 70%;
 }
@@ -377,3 +448,62 @@ nav {
    
 }
 
+
+
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #004080;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    color: #004080;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #004080;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #003366;
+}
+
+/* Form Messages */
+#formMessages {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #d32f2f;
+}
