@@ -4,7 +4,7 @@
     --text-color: #333;
     --white-color: #ffffff;
     --background-color: #f4f4f4;
-    --font-family: 'Arial', sans-serif;
+    --font-family: "Arial", sans-serif;
     --font-large: 48px;
     --font-medium: 20px;
     --font-small: 16px;
@@ -15,37 +15,118 @@
     --footer-color: rgb(18, 18, 72);
     --bg-light: rgba(0, 0, 0, 0.4);
     /* Light background for content */
-    --bg-dark: rgba(0, 0, 0, 0.8);
-    /* Dark background for content on hover */
+    --bg-dark: rgba(0, 0, 0, 0.7);
+
+    /* blur background */
+    --blur-background: blur(10px);
+
 }
 
-* {
-    margin: 0;
-    padding: 0;
+/* * {
+    border: 1px solid red !important;
+} */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family: var(--font-family);
 }
 
+/* Prevent font size inflation */
 html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
     scroll-behavior: smooth;
 }
 
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
 body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--font-family);
     background-color: var(--background-color);
 }
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
 
 .container {
     width: 100%;
 }
 
 header {
-    background-color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* backdrop blur strong */
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 100;
+    height: 5rem;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -53,6 +134,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0.5em;
 }
@@ -77,37 +159,69 @@ nav {
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.nav ul li a {
+.nav-item {
+    height: 100%;
+}
+
+.nav-item a {
     text-decoration: none;
     color: var(--secondary-color);
+    padding: 0.5em 1em;
+    border: 1px solid transparent;
     font-size: var(--font-small);
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
 }
 
-.nav ul li a:hover {
+.nav-item a:hover {
     color: var(--white-color);
     background-color: var(--secondary-color);
-    padding: 0.5em 0.8em;
     border: 1px solid var(--background-color);
     box-shadow: var(--shadow-color);
     transform: scale(1.1);
 }
 
 .nav .nav_btn {
-    padding: 10px 20px;
     border: 1px solid var(--white-color);
     color: var(--primary-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav .nav_btn:hover {
-    background-color: var(--primary-color);
+.nav-highlight a {
+    background-color: var(--secondary-color);
     color: var(--white-color);
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
 }
 
+.nav-highlight a:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ================================================================ */
+
+.section-spacing {
+    padding: 8em 0;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* ================================================================ */
 
 /* Footer Styles */
 .footer {
@@ -127,11 +241,11 @@ nav {
     /* Space out columns */
     align-items: flex-start;
     /* Align items to the top */
-    max-width: 1200px;
+    max-width: 1280px;
     /* Max width */
     margin: 0 auto;
     /* Center the content */
-    padding: 0 2rem;
+    padding: 8em 2rem;
     /* Padding for content */
 }
 
@@ -305,7 +419,7 @@ nav {
 .image-background {
     flex: 1;
     /* Take up remaining space */
-    background-image: url('/assets/media/your-background-image.jpg');
+    background-image: url("/assets/media/your-background-image.jpg");
     /* Replace with your background image */
     background-size: cover;
     /* Cover the entire area */
