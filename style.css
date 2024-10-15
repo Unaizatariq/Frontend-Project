@@ -758,38 +758,78 @@ nav {
     transition: transform 0.3s ease;
 }
 
-/* Contact Form Sections */
-.form-left, .form-right {
-    padding: 20px;
+/* Contact Form Section */
+.contact-form {
+    display: flex; /* Flexbox layout */
+    height: 100vh; /* Full viewport height */
 }
 
-.form-left {
-    float: left;
+/* Background Image Section */
+.image-background {
+    flex: 1; /* Take up remaining space */
+    background-image: url('media/your-background-image.jpg'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
 }
 
-.form-right {
-    float: right;
+/* Form Background Section */
+.form-background {
+    flex: 0 0 400px; /* Fixed width for the form side */
+    background-color: #3498db; /* Solid blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Form Wrapper */
+.form-wrapper {
+    background-color: #ffffff; /* White background for the form */
+    padding: 2rem; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%; /* Full width */
+    max-width: 350px; /* Max width for form */
+}
+
+/* Form Header */
+.form-wrapper h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333; /* Dark text color */
+}
+
+/* Input Group */
 .input-group {
     margin-bottom: 1rem;
 }
 
-.input-group input, .input-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
 }
 
+/* Input Focus Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #3498db; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button */
 .submit-btn {
     background-color: #3498db; /* Button color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: white; /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s; /* Transition for hover effect */
 }
 
 .submit-btn:hover {
@@ -798,16 +838,10 @@ nav {
 
 /* Image Slider */
 .image-slider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100%; /* Start hidden to the left */
-    right: -100%; /* Start hidden to the right */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: left 0.5s ease, right 0.5s ease;
-    z-index: 1; /* Behind the form wrapper */
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height */
+    overflow: hidden; /* Hide overflow */
 }
 
 .image-slider .slide {
@@ -815,42 +849,28 @@ nav {
 }
 
 .image-slider .slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* Cover the entire section */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Hover Effect */
-.form-wrapper:hover ~ .image-slider {
-    left: 0; /* Slide in on hover */
-    right: 0; /* Slide in on hover */
-}
-
-.form-wrapper:hover {
-    transform: scale(1.02); /* Slight scale effect on form hover */
-}
-
-/* Make the slides visible on hover */
+/* Initially show the first slide */
 .image-slider .slide:nth-child(1) {
     display: block; /* Show first slide */
 }
 
-/* Additional styling for responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
     .contact-form {
-        flex-direction: column;
+        flex-direction: column; /* Stack the sections on small screens */
+        height: auto; /* Adjust height */
     }
 
-    .form-wrapper {
-        width: 90%; /* Full width on small screens */
+    .form-background {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height */
     }
 
-    .form-left, .form-right {
-        float: none; /* Reset float for small screens */
-        width: 100%; /* Full width */
-    }
-
-    .image-slider {
-        width: 100%;
+    .image-background {
+        height: 200px; /* Fixed height for image background */
     }
 }
