@@ -11,6 +11,7 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     --font-weight: bold;
     --button-color: #3b82f6; /* Lighter blue for buttons */
+    --footer-color: rgb(18, 18, 72);
     --bg-light: rgba(0, 0, 0, 0.4); /* Light background for content */
     --bg-dark: rgba(0, 0, 0, 0.8); /* Dark background for content on hover */
 }
@@ -604,138 +605,113 @@ nav {
 }
 
 
-/* Footer */
+/* Footer Styles */
 .footer {
-    background-color: #2c3e50; /* Dark background color */
-    color: #ecf0f1; /* Light text color */
-    padding: 2rem 0;
+    background-color: var(--footer-color); /* Secondary color for footer */
+    color: var(--white-color); /* White text color */
+    padding: 2rem 0; /* Padding around footer */
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+/* Footer Container */
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out columns */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Max width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 2rem; /* Padding for content */
 }
 
-.footer-logo {
-    text-align: center;
-    margin-bottom: 2rem;
+/* Footer Logo */
+.footer-left {
+    flex: 1; /* Flex to take space */
+    text-align: left; /* Align text left */
 }
 
 .footer-logo img {
-    height: 70px; /* Logo size */
-    margin-bottom: 1rem;
+    height: 50px; /* Logo size */
+}
+
+.footer-logo h1, .footer-logo h3 {
+    margin: 0; /* Reset margin */
+    color: var(--white-color); /* Text color */
 }
 
 .footer-logo p {
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin-top: 0.5rem; /* Space above paragraph */
 }
 
-.footer-links,
-.footer-contact {
-    margin-bottom: 1.5rem;
+/* Contact Info */
+.footer-middle {
+    flex: 1; /* Flex to take space */
+    margin-left: 2rem; /* Margin for spacing */
 }
 
-.footer-links h3,
-.footer-contact h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #3498db; /* Highlight color for headers */
+.footer-middle h2 {
+    margin-bottom: 1rem; /* Space below header */
+    font-size: var(--font-medium); /* Use medium font size */
+    color: var(--white-color); /* White color for the header */
 }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
+.footer-middle a {
+    text-decoration: none; /* No underline */
+    color: var(--primary-color); /* Primary color for links */
 }
 
-.footer-links ul li {
-    margin-bottom: 0.5rem;
+.footer-middle p {
+    margin-bottom: 0.5rem; /* Space below each contact item */
+    font-size: var(--font-small); /* Use small font size */
 }
 
-.footer-links ul li a {
-    color: #ecf0f1; /* Light text for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Footer Right */
+.footer-right {
+    flex: 1; /* Flex to take space */
+    margin-left: 2rem; /* Margin for spacing */
+    text-align: left; /* Align text to the left */
+    color: var(--white-color); /* Set text color to white for contrast */
 }
 
-.footer-links ul li a:hover {
-    color: #3498db; /* Highlight color on hover */
+.footer-right h2 {
+    margin-bottom: 1rem; /* Space below the header */
+    font-size: var(--font-medium); /* Use medium font size */
+    color: var(--white-color); /* White color for the header */
 }
 
-.footer-contact p {
-    margin-bottom: 0.5rem;
+.footer-right p {
+    margin-bottom: 0.5rem; /* Space below the paragraph */
+    font-size: var(--font-small); /* Use small font size */
+    line-height: 1.6; /* Increase line height for readability */
 }
 
-.footer-contact a {
-    color: #ecf0f1; /* Light text for contact links */
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Social Media Links */
+.footer-social {
+    margin-top: 1rem; /* Space above social icons */
+    display: flex; /* Flexbox for social icons */
+    justify-content: flex-start; /* Align icons to the left */
 }
 
-.footer-contact a:hover {
-    color: #3498db; /* Highlight color on hover */
+.footer-social a {
+    margin-right: 15px; /* Space between icons */
+    color: var(--white-color); /* White color for icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
 }
 
-/* Map Container */
-.map-container {
-    margin: 2rem 0; /* Space above and below the map */
-    text-align: center; /* Center the map */
-}
-
-.map-container iframe {
-    width: 100%; /* Responsive width */
-    height: 250px; /* Height of the map */
-    border: none; /* No border for the iframe */
+.footer-social a:hover {
+    color: #ffd54f; /* Change color on hover */
 }
 
 /* Footer Bottom */
 .footer-bottom {
-    background-color: #34495e; /* Slightly lighter for footer bottom */
-    text-align: center;
-    padding: 1rem 0;
+    background-color: var(--footer-color); /* Use secondary color for footer bottom */
+    text-align: center; /* Center the text */
+    padding: 1rem 0; /* Padding for bottom */
 }
 
 .footer-bottom p {
-    margin: 0;
-    font-size: 0.9rem;
+    margin: 0; /* Reset margin */
+    color: var(--white-color); /* White color for text */
 }
-
-.footer-social {
-    margin-top: 0.5rem;
-}
-
-.footer-social a {
-    margin: 0 0.5rem;
-    color: #ecf0f1; /* Light color for social icons */
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-    color: #3498db; /* Highlight color on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-logo img {
-        height: 60px; /* Smaller logo for mobile */
-    }
-
-    .map-container {
-        margin: 1rem 0; /* Less margin for mobile */
-    }
-}
-
 /* Contact Form Section */
 .contact-form {
     position: relative;
@@ -750,7 +726,7 @@ nav {
 .form-wrapper {
     position: relative;
     width: 40%; /* Adjust width as needed */
-    border: 2px solid #3498db; /* Border around the form */
+    border: 2px solid var(--primary-color); /* Border around the form */
     padding: 20px;
     background-color: #ffffff; /* White background for form */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -775,7 +751,7 @@ nav {
 /* Form Background Section */
 .form-background {
     flex: 0 0 400px; /* Fixed width for the form side */
-    background-color: #3498db; /* Solid blue color */
+    background-color: var(--primary-color); /* Solid blue color */
     display: flex;
     justify-content: center;
     align-items: center;
