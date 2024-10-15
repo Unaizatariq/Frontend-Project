@@ -1,0 +1,551 @@
+/* Background Section */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    /* Maintain video visibility */
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-content {
+    position: relative;
+    color: var(--text-color);
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-dark);
+    /* Light background initially */
+    border-radius: 0.5rem;
+    animation: slideIn 1.5s ease forwards;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Soft shadow for depth */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background change */
+}
+
+.background-content:hover {
+    background-color: var(--bg-dark);
+    /* Darker background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    /* Increased shadow on hover */
+}
+
+/* Slide-in animation for smoother appearance */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+    color: var(--white-color);
+}
+
+.background-content h1 span {
+    display: block;
+    /* Move span to a new line */
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    /* Light blue color for emphasis */
+    margin-top: 0.5rem;
+    text-shadow: 2px 2px 4px var(--text-color);
+    /* White text shadow */
+}
+
+.background-content p {
+    font-size: 1.3rem;
+    color: var(--white-color);
+    /* Light blue for the paragraph */
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* Stylish buttons */
+.explore-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.explore-buttons button {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Add subtle shadow */
+}
+
+.explore-buttons button:hover {
+    background-color: var(--secondary-color);
+    /* Change to lighter blue on hover */
+    transform: scale(1.05);
+    /* Slight scale-up for hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .background-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .background-content h1 span {
+        font-size: 2.2rem;
+    }
+
+    .background-content p {
+        font-size: 1.1rem;
+    }
+
+    .explore-buttons button {
+        font-size: 0.95rem;
+    }
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    width: 100%;
+    max-width: 50%;
+    padding-right: 3vw;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-choose {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.service-choose div {
+    width: 48%;
+}
+
+.service-choose h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.service-choose p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+}
+
+.action-buttons button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.image-content {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3vw;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    max-height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    .text-content,
+    .image-content {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .text-content {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-choose {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/* Printing Section */
+.printing {
+    padding: 2em 4em;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+.printing-range h2 {
+    font-size: 2rem;
+    text-align: center;
+    /* Center-aligning the heading */
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.printing-range span {
+    display: block;
+}
+
+/* Flexbox for the services */
+.printing-services {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1.5em auto;
+    gap: 1.5rem;
+}
+
+/* Styles for each service box */
+.printing-needs,
+.printing-options,
+.print-project {
+    flex: 1;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 8px;
+    /* Slight rounding of the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Hover effects for each service box */
+.printing-needs:hover,
+.printing-options:hover,
+.print-project:hover {
+    transform: translateY(-5px);
+    /* Lift the box */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Deeper shadow on hover */
+}
+
+/* Headings and Text */
+.printing-needs h3,
+.printing-options h3,
+.print-project h3 {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.printing-needs p,
+.printing-options p,
+.print-project p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Links inside service boxes (for Learn More buttons) */
+.printing-needs a,
+.printing-options a,
+.print-project a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the buttons */
+.printing-needs a:hover,
+.printing-options a:hover,
+.print-project a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* Add some padding and margin to the icons */
+.printing-needs i,
+.printing-options i,
+.print-project i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Content Wrapper Section Styling */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.image-section {
+    width: 40%;
+    /* Proportional width for the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-height: 35vh;
+    /* Smaller height for the image */
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    /* Subtle hover effect */
+}
+
+.text-section {
+    width: 55%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.text-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.text-section ul li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.text-section ul li:before {
+    content: "\f058";
+    /* FontAwesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .image-section,
+    .text-section {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .image-section {
+        margin-bottom: 2rem;
+    }
+
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Logo Slider Section */
+.logo-slider {
+    background-color: var(--background-color);
+    /* Dark blue background */
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensure the logos stay within bounds */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    animation: slide 15s linear infinite;
+    /* Slide animation for logos */
+}
+
+.logo {
+    flex-shrink: 0;
+    margin: 0 2rem;
+    /* Space between logos */
+}
+
+.logo img {
+    max-height: 80px;
+    /* Adjust based on logo size */
+    width: auto;
+    filter: brightness(100%);
+    transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+    filter: brightness(150%);
+    /* Slight brightness increase on hover */
+}
+
+/* Keyframes for slide animation */
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: center;
+    }
+
+    .logo img {
+        max-height: 60px;
+    }
+
+    .logo {
+        margin: 0 1rem;
+    }
+}
