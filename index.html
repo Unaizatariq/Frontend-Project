@@ -5,9 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ms-printers</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <script src="font awesome/fontawesome.js" crossorigin="anonymous"></script>
+  
+    <!-- Font Awesome  -->
+    <script src="assets/fontawesome/85de21a31a.js"></script>
+
+    <!-- Load your custom CSS -->
+    <link rel="stylesheet" href="/Css/style.css">
+
+    <!-- Load jQuery -->
+    <script src="assets/jquery/jquery-3.7.1.js"></script>
+  
+
+    
+
 </head>
 
 <body>
@@ -15,7 +25,7 @@
         <header>
             <nav class="nav">
                 <div class="logo">
-                    <img src="media/MS-LOGO.png" alt="Ms printers Logo">
+                    <img src="media/logos/MS-LOGO.png" alt="Ms printers Logo">
                     <a href="#" class="nav_logo">Mahmood Sons Printers</a>
                 </div>
                 <ul>
@@ -31,7 +41,7 @@
         <section class="background">
             <div class="background-video">
                 <video class="video-background" autoplay muted loop>
-                    <source src="media/bg.mp4" type="video/mp4">
+                    <source src="media/videos/bg.mp4" type="video/mp4">
                 </video>
             </div>
 
@@ -39,8 +49,8 @@
                 <h2>Welcome to <span>Mehmood Sons Printers </span><span>GROUP OF COMPANIES</span></h2>
                 <p>Your one-stop solution for all printing needs and giveaways in Karachi.</p>
                 <div class="explore-buttons">
-                    <button>Explore Printing Services</button>
-                    <button>Discover Giveaway</button>
+                    <button id="exploreServicesBtn">Explore Printing Services</button>
+                    <button id="discoverGiveawayBtn">Discover Giveaway</button>
                 </div>
             </div>
         </section>
@@ -51,7 +61,7 @@
                     <h2>Comprehensive Commercial Printing Solutions for You</h2>
                     <p>At Mehmood Sons Printers, we specialize in delivering a full range of commercial offset printing services. From initial design concepts to final dispatch, we ensure quality and precision at every step.</p>
                     <div class="service-choose">
-                        <div class="our-services">
+                        <div class="ourServices">
                             <h4>Our Services</h4>
                             <p>Explore our diverse printing options tailored to meet your business needs.</p>
                         </div>
@@ -62,12 +72,12 @@
                         </div>
                     </div>
                     <div class="action-buttons">
-                        <button class="learn-more">Learn More</button>
+                        <button class="learn-more" >Learn More</button>
                     </div>
                 </div>
 
                 <div class="image-content">
-                    <img src="media/printing-solution.jpg" alt="Commercial Printing Solution">
+                    <img src="media/Sample/printing-solution.jpg" alt="Commercial Printing Solution">
                 </div>
             </div>
         </section>
@@ -81,21 +91,27 @@
                     <i class="fa-solid fa-cube"></i>
                     <h3>Tailored Solutions for All Your Printing Needs</h3>
                     <p>From brochures to packaging, we cover all aspects of commercial printing.</p>
-                    <a href="#">Learn More</a>
+                    <div class="action-buttons">
+                        <button class="learn-more" >Learn More</button>
+                    </div>
                 </article>
         
                 <article class="printing-options reveal">
                     <i class="fa-solid fa-cube"></i>
                     <h3>Diverse Printing Options to Elevate Your Brand</h3>
                     <p>Discover our extensive selection including flyers, magazines, and promotional materials.</p>
-                    <a href="#">Learn More</a>
+                    <div class="action-buttons">
+                        <button class="learn-more">Learn More</button>
+                    </div>
                 </article>
         
                 <article class="print-project reveal">
                     <i class="fa-solid fa-cube"></i>
                     <h3>Quality and Creativity in Every Print Project</h3>
                     <p>Our commitment to excellence ensures your project stands out.</p>
-                    <a href="#">Learn More</a>
+                    <div class="action-buttons">
+                        <button class="learn-more">Learn More</button>
+                    </div>
                 </article>
             </div>
         </section>
@@ -103,10 +119,10 @@
 
         <section class="content-wrapper reveal">
             <div class="image-section">
-                <img src="media/quality-printing.jpg" alt="Printing Image Placeholder">
+                <img src="media/Sample/quality-printing.jpg" alt="Printing Image Placeholder">
             </div>
             <div class="text-section">
-                <h1>Experience Seamless Printing Solutions from Concept to Delivery with Us</h1>
+                <h2>Experience Seamless Printing Solutions from Concept to Delivery with Us</h2>
                 <p>
                     At Mahmood Sons Printers, we provide a comprehensive range of printing services tailored to meet your needs. From initial design concepts to final delivery, we ensure quality and satisfaction at every step.
                 </p>
@@ -121,19 +137,19 @@
         <section class="logo-slider">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="media/MS-LOGO.png" alt="Mehmood Sons Printers">
+                    <img src="media/logos/MS-LOGO.png" alt="Mehmood Sons Printers">
                 </div>
                 <div class="logo">
-                    <img src="media/T.H.png" alt="Company 1 Logo">
+                    <img src="media/logos/T.H.png" alt="T.H enterprise logo">
                 </div>
                 <div class="logo">
-                    <img src="media/ST.png" alt="Company 2 Logo">
+                    <img src="media/logos/ST.png" alt="S.T Traders logo">
                 </div>
                 <div class="logo">
-                    <img src="media/MM.png" alt="Company 3 Logo">
+                    <img src="media/logos/MM.png" alt="M M enterprise">
                 </div>
                 <div class="logo">
-                    <img src="media/ZM.png" alt="Company 4 Logo">
+                    <img src="media/logos/ZM.png" alt="ZM printers">
                 </div>
             </div>
         </section>
@@ -142,7 +158,7 @@
             <div class="footer-container">
                 <div class="footer-left">
                     <div class="footer-logo">
-                        <img src="media/MS-LOGO.png" alt="Mehmood Sons Printers Logo">
+                        <img src="media/logos/MS-LOGO.png" alt="Mehmood Sons Printers Logo">
                         <h1>Mahmood Sons</h1>
                         <h3>PRINTERS</h3>
                         <p>Make your prints come to life! With our level of expertise and precision, you won't have to look anywhere else!</p>
@@ -174,5 +190,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

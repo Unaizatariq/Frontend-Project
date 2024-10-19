@@ -1,67 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .business-way {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center align items vertically */
-    justify-content: space-between; /* Space items evenly */
-    background-color: var(--secondary-color); /* Use secondary color */
-    color: var(--white-color); /* White text color */
-    padding: 2rem; /* Padding around section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: var(--shadow-color); /* Shadow effect */
-    position: relative; /* Position for pseudo-elements */
-}
+    <title>Ms-printers</title>
 
-.business-content {
-    max-width: 50%; /* Limit width for text */
-}
+    <!--Font Awesome -->
+    <script src="assets/fontawesome/85de21a31a.js"></script>
 
-.business-title {
-    font-size: var(--font-large); /* Large font size for business title */
-    font-weight: var(--font-weight); /* Bold font weight */
-    margin: 0.5rem 0; /* Margin around title */
-    color: var(--white-color); /* White color for the title */
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Css/style.css">
 
-h1 {
-    font-size: var(--font-medium); /* Medium font size for main heading */
-    margin: 0; /* Reset margin */
-    color: var(--white-color); /* White color for the heading */
-}
+    <!-- jquery -->
+    <script src="assets/jquery/jquery-3.7.1.js"></script>
 
-p {
-    font-size: var(--font-small); /* Small font size for paragraph */
-    line-height: 1.6; /* Increase line height for readability */
-    margin-top: 1rem; /* Space above paragraph */
-}
 
-.business-image {
-    flex: 1; /* Allow image section to grow */
-    display: flex; /* Center align the image */
-    justify-content: center; /* Center the image */
-}
-
-.business-image img {
-    width: 100%; /* Full width of container */
-    max-width: 400px; /* Limit max width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for image */
-}
-
-    </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <nav class="nav">
                 <div class="logo">
-                    <img src="media/MS-LOGO.png" alt="Ms printers Logo">
+                    <img src="media/logos/MS-LOGO.png" alt="Ms printers Logo">
                     <a href="#" class="nav_logo">Mahmood Sons Printers</a>
                 </div>
                 <ul>
@@ -73,157 +35,216 @@ p {
                 </ul>
             </nav>
         </header>
-<main>
-    <section class="services">
-        <section class="business-way">
-            <div class="business-content">
-                <h1>THE FUTURE NEW</h1>
-                <h1 class="business-title">BUSINESS WAY</h1>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="media/carouselslider/events.png" alt="Image 1">
+                <img src="media/carouselslider/giveaways.png" alt="Image 2">
+                <img src="media/carouselslider/printing.png" alt="Image 3">
+            </div>
+            <button class="slide-btn" id="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="slide-btn" id="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <h2 class="services-heading">Our Services</h2>
+
+        <main>
+            <section class="our-services reveal">
+                <div class="services-slider">
+                    <div class="service-container">
+                        <i class="fas fa-book-open fa-3x"></i>
+                        <h2>Product Brochures</h2>
+                        <p>Our product brochures are designed to showcase your offerings with stunning visuals and
+                            compelling text.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-paper-plane fa-3x"></i>
+                        <h2>Flyers</h2>
+                        <p>We produce high-quality flyers that are perfect for promoting events, products, or services.
+                        </p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-pencil-alt fa-3x"></i>
+                        <h2>Stationery</h2>
+                        <p>Customize your stationery to reflect your brand identity...</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                        <h2>Calendars / Planners</h2>
+                        <p>Keep your audience organized and engaged with our beautifully designed calendars and
+                            planners.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-images fa-3x"></i>
+                        <h2>Posters</h2>
+                        <p>Make a bold statement with our eye-catching posters.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-book fa-3x"></i>
+                        <h2>Books</h2>
+                        <p>We offer professional book printing services.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-tools fa-3x"></i>
+                        <h2>Service Materials</h2>
+                        <p>Enhance your customer experience with well-designed service materials.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-box-open fa-3x"></i>
+                        <h2>Packaging</h2>
+                        <p>Our packaging solutions are not only functional but also designed to enhance your product's
+                            appeal.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-book fa-3x"></i>
+                        <h2>Journals</h2>
+                        <p>Our custom journals are perfect for personal or promotional use.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-book-open fa-3x"></i>
+                        <h2>Workbooks</h2>
+                        <p>Designed for educational and training purposes, our workbooks are tailored to meet the needs.
+                        </p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-tags fa-3x"></i>
+                        <h2>Drop Cards</h2>
+                        <p>Promote your business with our creative drop cards.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-gift fa-3x"></i>
+                        <h2>Giveaways</h2>
+                        <p>Boost your brand visibility with our range of promotional giveaways.</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-bullhorn fa-3x"></i>
+                        <h2>Buntings</h2>
+                        <p>Add a festive touch to your events with custom bunting...</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-certificate fa-3x"></i>
+                        <h2>Certificates</h2>
+                        <p>Recognize achievements with our beautifully printed certificates...</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-book fa-3x"></i>
+                        <h2>Notebook/Diaries</h2>
+                        <p>Our notebooks and diaries are perfect for personal use or corporate gifts...</p>
+                    </div>
+                    <div class="service-container">
+                        <i class="fas fa-newspaper fa-3x"></i>
+                        <h2>Magazines</h2>
+                        <p>We produce high-quality magazines tailored to your content and audience...</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="machinery-section reveal">
+                <h2>Our Machinery</h2>
+                <div class="services-row">
+                    <div class="service-container">
+                        <h3>Double Color Heidelberg Offset Printing Machine</h3>
+                        <p class="specification">Size: 20” x 30” (Model 1990)</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>Double Color Heidelberg Offset Printing Machine</h3>
+                        <p class="specification">Size: 20” x 30” (Model 1995)</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>Paper Cutting Machine</h3>
+                        <p class="specification">Precision cutting for various materials.</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>Die Cutting Folding Machine</h3>
+                        <p class="specification">Efficient die cutting and folding solutions.</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>Automatic Pasting and Binding Machine</h3>
+                        <p class="specification">Fully automated for high-quality binding.</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>Fully Equipped Creative Lab</h3>
+                        <p class="specification">Where creativity meets technology.</p>
+                    </div>
+                    <div class="service-container">
+                        <h3>PVC ID Cards Setup, Easy Card, PET Card</h3>
+                        <p class="specification">Professional quality ID card printing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="clients-section reveal">
+                <h2>Our Clients</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    For us, every printing project is a fascinating journey that begins in the mind
+                    of an ideator or as a client’s assignment. We are proud that we have
+                    successfully completed many such journeys with our two decades of
+                    expertise in graphic design, pre-press, print, and solutions. Clients of
+                    international repute who once made a maiden voyage with us today
+                    celebrate every milestone and cheer us to think bigger. Attention to detail
+                    and commitment to excellence have resulted in numerous satisfied clients
+                    and a body of work which has been recognized for outstanding
+                    achievement. No wonder Mehmood Sons Printer is currently one of the
+                    most respected names in Pakistan in the commercial printing business.
                 </p>
-            </div>
-            <div class="business-image">
-                <img src="media/printing solution.jpg" alt="Business Way Image">
-            </div>
-        </section>
-        
-    
-        <div class="services-row row-1">
-            <div class="service-container">
-                <h2>Product Brochures</h2>
-                <p>Our product brochures are designed to showcase your offerings with stunning visuals and compelling text...</p>
-            </div>
-            <div class="service-container">
-                <h2>Flyers</h2>
-                <p>We produce high-quality flyers that are perfect for promoting events, products, or services...</p>
-            </div>
-            <div class="service-container">
-                <h2>Stationery</h2>
-                <p>Customize your stationery to reflect your brand identity...</p>
-            </div>
-            <div class="service-container">
-                <h2>Calendars / Planners</h2>
-                <p>Keep your audience organized and engaged with our beautifully designed calendars and planners...</p>
-            </div>
-        </div>
-    
-        <div class="services-row row-2">
-            <div class="service-container">
-                <h2>Posters</h2>
-                <p>Make a bold statement with our eye-catching posters...</p>
-            </div>
-            <div class="service-container">
-                <h2>Books</h2>
-                <p>We offer professional book printing services...</p>
-            </div>
-            <div class="service-container">
-                <h2>Service Materials</h2>
-                <p>Enhance your customer experience with well-designed service materials...</p>
-            </div>
-            <div class="service-container">
-                <h2>Packaging</h2>
-                <p>Our packaging solutions are not only functional but also designed to enhance your product's appeal...</p>
-            </div>
-        </div>
-    
-        <div class="services-row row-3">
-            <div class="service-container">
-                <h2>Journals</h2>
-                <p>Our custom journals are perfect for personal or promotional use...</p>
-            </div>
-            <div class="service-container">
-                <h2>Workbooks</h2>
-                <p>Designed for educational and training purposes, our workbooks are tailored to meet the needs...</p>
-            </div>
-            <div class="service-container">
-                <h2>Drop Cards</h2>
-                <p>Promote your business with our creative drop cards...</p>
-            </div>
-            <div class="service-container">
-                <h2>Giveaways</h2>
-                <p>Boost your brand visibility with our range of promotional giveaways...</p>
-            </div>
-        </div>
-    
-        <div class="services-row row-4">
-            <div class="service-container">
-                <h2>Buntings</h2>
-                <p>Add a festive touch to your events with custom bunting...</p>
-            </div>
-            <div class="service-container">
-                <h2>Certificates</h2>
-                <p>Recognize achievements with our beautifully printed certificates...</p>
-            </div>
-            <div class="service-container">
-                <h2>Notebook/Diaries</h2>
-                <p>Our notebooks and diaries are perfect for personal use or corporate gifts...</p>
-            </div>
-            <div class="service-container">
-                <h2>Magazines</h2>
-                <p>We produce high-quality magazines tailored to your content and audience...</p>
-            </div>
-        </div>
-    
-        <div class="services-row row-5">
-            <div class="service-container">
-                <h2>PDAs (Personal Digital Assistants)</h2>
-                <p>We provide printing services for PDAs...</p>
-            </div>
-            <div class="service-container">
-                <h2>Souvenir/Shields</h2>
-                <p>Commemorate special events with our custom souvenirs and shields...</p>
-            </div>
-            <div class="service-container">
-                <h2>School Copies</h2>
-                <p>We specialize in printing school materials...</p>
-            </div>
-            <div class="service-container">
-                <h2>PVC ID Cards</h2>
-                <p>Create durable and professional PVC ID cards for your organization...</p>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-</main>
+                <div class="clients-logos">
+                    <img src="media/clients/GETZ-pharma-logo.jpg" alt="Getz Pharma">
+                    <img src="media/clients/abbotLogo.jpg" alt="abbotLogo">
+                    <img src="media/clients/AGPlogo.jpg" alt="AGPlogo">
+                    <img src="media/clients/atcoLogo.jpg" alt="atcoLogo">
+                    <img src="media/clients/genix.jpg" alt="genix">
+                    <img src="media/clients/handsLogo.jpg" alt="handsLogo">
+                    <img src="media/clients/HilalLogo.jpg" alt="hilalLogo">
+                    <img src="media/clients/hitlonLogo.jpg" alt="hitlonLogo">
+                    <img src="media/clients/macterLogo.jpg" alt="macterLogo">
+                    <img src="media/clients/national_foods_logo.jpg" alt="national_foods_logo">
+                    <img src="media/clients/UtopiaLogo.jpg" alt="UtopiaLogo">
+                </div>
+            </section>
+        </main>
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-left">
-            <div class="footer-logo">
-                <img src="media/MS-LOGO.png" alt="Mehmood Sons Printers Logo">
-                <h1>Mahmood Sons</h1>
-                <h3>PRINTERS</h3>
-                <p>Make your prints come to life! With our level of expertise and precision, you won't have to look anywhere else!</p>
-            </div>
-        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="media/logos/MS-LOGO.png" alt="Mehmood Sons Printers Logo">
+                        <h1>Mahmood Sons</h1>
+                        <h3>PRINTERS</h3>
+                        <p>Make your prints come to life! With our level of expertise and precision, you won't have to
+                            look anywhere else!</p>
+                    </div>
+                </div>
 
-        <div class="footer-middle">
-            <h2>GET IN TOUCH</h2>
-            <p><strong>Address:</strong> 11-K/II, Ansari Mention, Nazimabad #1, Karachi.</p>
-            <p><strong>Office:</strong> <a href="tel:+92136700194"> 021-36700194</a></p>
-            <p><strong>Shahid Khan:</strong> <a href="tel:+923212489216"> 0321-2489216</a></p>
-            <p><strong>Tariq Mehmood:</strong> <a href="tel:+923333730257"> 03333730257</a></p>
-            <p><strong>Email:</strong> <a href="mailto:msprinterpk@gmail.com"> msprinterpk@gmail.com</a></p>
-        </div>
+                <div class="footer-middle">
+                    <h2>GET IN TOUCH</h2>
+                    <p><strong>Address:</strong> 11-K/II, Ansari Mention, Nazimabad #1, Karachi.</p>
+                    <p><strong>Office:</strong> <a href="tel:+92136700194">021-36700194</a></p>
+                    <p><strong>Shahid Khan:</strong> <a href="tel:+923212489216">0321-2489216</a></p>
+                    <p><strong>Tariq Mehmood:</strong> <a href="tel:+923333730257">03333730257</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:msprinterpk@gmail.com">msprinterpk@gmail.com</a></p>
+                </div>
 
-        <div class="footer-right">
-            <h2>Follow Us On</h2>
-            <p>Join us on our social networks. Keep up to date with all the news and events that take place.</p>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/share/nZMCRHoySrVvuB1L/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/company/mahmood-sons-printers/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/ms_printer?igsh=b2hhN3p5c2xoMWdl" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <div class="footer-right">
+                    <h2>Follow Us On</h2>
+                    <p>Join us on our social networks. Keep up to date with all the news and events that take place.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/nZMCRHoySrVvuB1L/" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/mahmood-sons-printers/" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/ms_printer?igsh=b2hhN3p5c2xoMWdl" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 MS Printer Group. All Rights Reserved</p>
+            </div>
+        </footer>
     </div>
-
-    <div class="footer-bottom">
-        <p>Copyright &copy; 2024 MS Printer Group. All Rights Reserved</p>
-    </div>
-</footer>
-</div>
+    <script src="/js/services.js"></script>
+    <script src="/js/reveal.js"></script>
 </body>
 </html>
