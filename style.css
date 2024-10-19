@@ -756,123 +756,128 @@ footer {
     margin: 0;
     /* Reset margin */
     color: var(--white-color);
-    /* White color for text */
 }
 
+/* about us  */
 
+.about-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
 
- /* About Section Cover Styles */
- .about-cover {
-    width: 100%;
-    height: 60vh; /* Set height relative to viewport */
-    background-image: url('media/background.jpg'); /* Add your image path here */
-    background-size: cover; /* Cover entire section */
-    background-position: center; /* Center the image */
-    display: flex; /* Flexbox to center content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: var(--text-color); /* Text color */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-content h2 {
     color: var(--secondary-color);
     font-size: var(--font-large);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
-.about-content .slogan {
-    color: var(--text-color);
-    font-family: myfonts, sans-serif;
-    font-size: var(--font-large);
-    text-align: center;
-    margin-bottom: 1rem; /* Space below heading */
+
+.svg-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
 .about-content p {
     font-size: var(--font-medium);
     text-align: center;
-    max-width: 800px; /* Limit width of paragraph */
-    margin: 0 auto; /* Center the paragraph*/
-    line-height: 1.6; /*Increase line height for readability*/
+    max-width: 800px; 
+    margin: 0 auto;
+    margin-bottom: 1em;
+    line-height: 1.6;
 }
 
 .who-we-are {
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center vertically */
-    background-color: var(--footer-color); /* Background color */
-    color: var(--white-color); /* Text color */
-    padding: 3rem; /* Padding for section */
+    display: flex;
+    align-items: center;
+    background-color: var(--footer-color);
+    color: var(--white-color);
+    padding: 3rem; 
 }
 
 .who-we-are-content {
-    flex: 1; /* Allow this section to take available space */
-    margin-right: 2rem; /* Space between text and video */
+    flex: 1;
+    margin-right: 2rem;
 }
 
 .who-we-are-content h2 {
-    font-size: var(--font-large); /* Use larger font size for the heading */
-    margin-bottom: 1rem; /* Space below heading */
+    font-size: var(--font-large);
+    margin-bottom: 1rem;
 }
 
 .who-we-are-content p {
-    font-size: var(--font-medium); /* Use medium font size for paragraph */
-    line-height: 1.6; /* Increase line height for readability */
+    font-size: var(--font-medium);
+    line-height: 1.6;
 }
 
 .who-we-are-video {
-    flex: 1; /* Allow video section to take available space */
-    max-width: 500px; /* Max width for video container */
+    flex: 1;
+    max-width: 500px;
 }
 
 .who-we-are-video video {
-    width: 100%; /* Make video responsive */
-    border-radius: 8px; /* Rounded corners for video */
+    width: 100%;
+    border-radius: 8px;
 }
 
 .our-team {
-    background-color: var(--white-color); /* White background for the team section */
-    padding: 3rem; /* Padding for the section */
-    text-align: center; /* Center text */
+    background-color: var(--white-color);
+    padding: 3rem;
+    text-align: center;
 }
 
 .our-team h2 {
-    font-size: var(--font-large); /* Use large font size for the heading */
-    margin-bottom: 2rem; /* Space below heading */
+    font-size: var(--font-large);
+    margin-bottom: 2rem;
 }
 
 .team-container {
-    display: flex; /* Flexbox for layout */
-    justify-content: space-around; /* Space out containers */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .team-member {
-    background-color: var(--background-color); /* Light background for each member */
-    border-radius: 0.5rem; /* Rounded corners */
-    padding: 1rem; /* Padding inside each member container */
-    width: 20%; /* Width of each container */
-    margin: 1rem; /* Margin between containers */
-    box-shadow: 0 0.25rem 0.5rem var(--text-color); /* Soft shadow for depth */
-    transition: transform 0.3s; /* Transition for hover effect */
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 20%; 
+    margin: 1rem; 
+    box-shadow: 0 0.25rem 0.5rem var(--text-color);
+    transition: transform 0.3s;
 }
 
 .team-member:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
 .team-image {
-    width: 100%; /* Make image responsive */
-    border-radius: 0.5rem; /* Rounded corners for image */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    border-radius: 0.5rem;
+    height: auto;
 }
 
 .team-member h3 {
-    margin: 0.5rem 0; /* Space above and below name */
-    font-size: var(--font-medium); /* Medium font size for name */
+    margin: 0.5rem 0; 
+    font-size: var(--font-medium); 
 }
 
 .team-member p {
-    margin: 0; /* Reset margin */
-    font-size: var(--font-small); /* Small font size for position */
+    margin: 0; 
+    font-size: var(--font-small);
 }
 
 .reveal {
@@ -899,113 +904,26 @@ transform: translateY(0);
 
 
 
-/* Background Image Section */
-.image-background {
-    flex: 1; /* Take up remaining space */
-    background-image: url('media/your-background-image.jpg'); /* Replace with your background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
+.reveal {
+opacity: 0;
+transform: translateY(100px);
+transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Form Background Section */
-.form-background {
-    flex: 0 0 400px; /* Fixed width for the form side */
-    background-color: var(--primary-color); /* Solid blue color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
 }
 
-/* Form Wrapper */
-.form-wrapper {
-    background-color: #ffffff; /* White background for the form */
-    padding: 2rem; /* Padding around the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    width: 100%; /* Full width */
-    max-width: 350px; /* Max width for form */
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(50px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
-/* Form Header */
-.form-wrapper h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #333; /* Dark text color */
-}
 
-/* Input Group */
-.input-group {
-    margin-bottom: 1rem;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Font size */
-}
-
-/* Input Focus Effect */
-.input-group input:focus,
-.input-group textarea:focus {
-    border-color: #3498db; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-/* Submit Button */
-.submit-btn {
-    background-color: #3498db; /* Button color */
-    color: white; /* Text color */
-    padding: 10px 15px; /* Button padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1rem; /* Font size */
-    width: 100%; /* Full width button */
-    transition: background-color 0.3s; /* Transition for hover effect */
-}
-
-.submit-btn:hover {
-    background-color: #2980b9; /* Darker button color on hover */
-}
-
-/* Image Slider */
-.image-slider {
-    position: relative;
-    width: 100%;
-    height: 100%; /* Full height */
-    overflow: hidden; /* Hide overflow */
-}
-
-.image-slider .slide {
-    display: none; /* Hide all slides by default */
-}
-
-.image-slider .slide img {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Initially show the first slide */
-.image-slider .slide:nth-child(1) {
-    display: block; /* Show first slide */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-form {
-        flex-direction: column; /* Stack the sections on small screens */
-        height: auto; /* Adjust height */
-    }
-
-    .form-background {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Auto height */
-    }
-
-    .image-background {
-        height: 200px; /* Fixed height for image background */
-    }
-}
