@@ -1624,6 +1624,7 @@ transform: translateY(0);
     justify-content: center;
     height: 90vh;
 }
+
 .form-wrapper {
     background-color: var(--white-color);
     padding: 2rem;
@@ -1631,6 +1632,8 @@ transform: translateY(0);
     box-shadow: 0 2px 8px var(--shadow-color);
     text-align: center;
     height: 100%;
+    overflow:auto; 
+
 }
 .logoContact {
     width: 20%; 
@@ -1730,7 +1733,7 @@ transform: translateY(0);
     }
 
     .form-content h2 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .input-group input,
@@ -1740,7 +1743,7 @@ transform: translateY(0);
 
     .submit-btn {
         padding: 1rem 2rem;
-        font-size: 1.1rem; 
+        font-size: 1rem; 
     }
 
     .right-section {
